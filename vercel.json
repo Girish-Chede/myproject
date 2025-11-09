@@ -1,0 +1,8 @@
+{
+  "buildCommand": "pnpm run build",
+  "installCommand": "pnpm install --no-frozen-lockfile",
+  "framework": "nextjs",
+  "functions": {
+    "maxDuration": 10
+  }
+}

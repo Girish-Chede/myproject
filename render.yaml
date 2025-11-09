@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: budgetbuddy
+    env: node
+    plan: free
+    buildCommand: npx --yes pnpm@9 install --no-frozen-lockfile && npx pnpm run build
+    startCommand: npx pnpm start
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+      - key: NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+        fromSecret: NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+      - key: CLERK_SECRET_KEY
+        fromSecret: CLERK_SECRET_KEY
+      - key: DATABASE_URL
+        fromSecret: DATABASE_URL
+      - key: ARCJET_KEY
+        fromSecret: ARCJET_KEY
+      - key: GEMINI_API_KEY
+        fromSecret: GEMINI_API_KEY
+      - key: RESEND_API_KEY
+        fromSecret: RESEND_API_KEY
+      - key: NEXT_PUBLIC_CLERK_SIGN_IN_URL
+        value: /sign-in
+      - key: NEXT_PUBLIC_CLERK_SIGN_UP_URL
+        value: /sign-up
+      - key: NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL
+        value: /onboarding
+      - key: NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL
+        value: /onboarding
+      - key: DEV_SEED
+        value: true
