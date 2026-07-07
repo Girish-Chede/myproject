@@ -12,7 +12,7 @@ Any changes you make to your deployed app will be automatically pushed to this r
 
 ## Deployment
 
-Your project is live at:
+Change the changes Your project is live at:
 
 **[https://vercel.com/adityas-projects-e5e2af34/v0-finance-platform-rebuild](https://vercel.com/adityas-projects-e5e2af34/v0-finance-platform-rebuild)**
 
